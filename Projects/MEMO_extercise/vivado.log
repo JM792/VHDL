@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Apr 30 11:02:59 2023
+# Process ID: 2092
+# Current directory: E:/TUM/VHDL/Projects/MEMO_extercise
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14164 E:\TUM\VHDL\Projects\MEMO_extercise\MEMO_extercise.xpr
+# Log file: E:/TUM/VHDL/Projects/MEMO_extercise/vivado.log
+# Journal file: E:/TUM/VHDL/Projects/MEMO_extercise\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/TUM/VHDL/Projects/MEMO_extercise/MEMO_extercise.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+close [ open E:/TUM/VHDL/Resources/TB_2.vhd w ]
+add_files E:/TUM/VHDL/Resources/TB_2.vhd
+update_compile_order -fileset sources_1
+close_project
+open_project E:/TUM/VHDL-git/exercises/VHDL-Exercises.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2019.2/data/ip'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 30 12:01:47 2023...

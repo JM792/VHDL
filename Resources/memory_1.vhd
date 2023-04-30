@@ -1,46 +1,26 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 29.04.2023 20:28:19
--- Design Name: 
--- Module Name: memory_1 - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+use IEEE.numeric_bit.all;
 
 entity memory_1 is
-    Port ( w_en : in STD_LOGIC;
-           data_in : in STD_LOGIC_VECTOR (0 downto 0);
-           addr : in STD_LOGIC_VECTOR (0 downto 0);
-           data_out : out STD_LOGIC_VECTOR (0 downto 0));
+    Port ( w_en : in bit;
+           data_in : in bit_vector (11 downto 0);
+           addr : in bit_vector (11 downto 0);
+           data_out : out bit_vector (11 downto 0));
 end memory_1;
 
 architecture Behavioral of memory_1 is
-
+begin 
+process(w_en, data_in, addr)
+    type memo_type is array (integer range 0 to 4065) of bit_vector(11 downto 0);
+    variable Mem: memo_type;
 begin
-
+--convert memory address from 12 bit_vector to integer
+    if w_en = '1' then
+    Mem(to_integer(UNSIGNED(addr))) := data_in;
+    end if;
+    data_out <= Mem(to_integer(UNSIGNED(addr)));
+end process;
 
 end Behavioral;

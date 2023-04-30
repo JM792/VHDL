@@ -1,0 +1,277 @@
+
+*** Running vivado
+    with args -log memory_1_TEST.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source memory_1_TEST.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source memory_1_TEST.tcl -notrace
+Command: synth_design -top memory_1_TEST -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6004 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 573.379 ; gain = 242.582
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'memory_1_TEST' [E:/TUM/VHDL/Resources/TB_1.vhd:31]
+INFO: [Synth 8-637] synthesizing blackbox instance 'UUT1' of component 'MEM1' [E:/TUM/VHDL/Resources/TB_1.vhd:46]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:57]
+INFO: [Common 17-14] Message 'Synth 8-312' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+*** Running vivado
+    with args -log memory_1_TEST.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source memory_1_TEST.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source memory_1_TEST.tcl -notrace
+Command: synth_design -top memory_1_TEST -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 25380 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 572.395 ; gain = 242.590
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'memory_1_TEST' [E:/TUM/VHDL/Resources/TB_1.vhd:31]
+INFO: [Synth 8-637] synthesizing blackbox instance 'UUT1' of component 'MEM1' [E:/TUM/VHDL/Resources/TB_1.vhd:46]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:56]
+INFO: [Common 17-14] Message 'Synth 8-312' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+*** Running vivado
+    with args -log memory_2_TEST.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source memory_2_TEST.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source memory_2_TEST.tcl -notrace
+Command: synth_design -top memory_2_TEST -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 21060 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 573.238 ; gain = 242.895
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-1031] data_num is not declared [E:/TUM/VHDL/Resources/TB_2.vhd:63]
+INFO: [Synth 8-2810] unit tb ignored due to previous errors [E:/TUM/VHDL/Resources/TB_2.vhd:18]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 642.621 ; gain = 312.277
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 30 17:22:35 2023...
