@@ -43,7 +43,7 @@ for TB
    
     );
     end for;
-    end for;
+end for;
 end MEM1_TB_Config;
 
 configuration MEM2_TB_Config of memory_2_TEST is

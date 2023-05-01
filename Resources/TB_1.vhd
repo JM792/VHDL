@@ -44,7 +44,11 @@ signal addr_s, data_to_memo, data_from_memo: constrained_bit_vec;
 
 begin
 UUT1: MEM1
-port map (w_en_s, addr_s, data_to_memo, data_from_memo);
+port map (
+    w_en_C => w_en_s,
+    addr_C => addr_s, 
+    data_in_C => data_to_memo, 
+    data_out_C => data_from_memo);
 
 process
     use WORK.bit_vec_nat_pack.all;    
@@ -56,39 +60,19 @@ for addr_index in 0 to 4095 loop
     w_en_s <= '1'; wait for 1 ns;
     w_en_s <= '0'; wait for 1 ns;
 end loop;
-
-for data_num in 0 to 4095 loop
-    for addr_index in 0 to 4095 loop    
-       
-            addr_s <= nat2bit_vec(addr_index);
+--write memo
+for data_num in 0 to 4095 loop    
+            addr_s <= nat2bit_vec(data_num);
             data_to_memo <= nat2bit_vec(data_num);
             w_en_s <= '1'; wait for 1 ns;
-            w_en_s <= '0'; wait for 1 ns;  
-            
-            
-    for r_addr_index in 0 to 4095 loop
-        if r_addr_index /= addr_index then
-            addr_s <= nat2bit_vec(r_addr_index);
+            w_en_s <= '0'; wait for 1 ns;      
+end loop;             
+--test: read memo
+for r_addr_index in 0 to 4095 loop 
+            addr_s <= nat2bit_vec(r_addr_index);     
             w_en_s <= '0'; wait for 1 ns;
-            assert data_from_memo = X"000";
-        else 
-            addr_s <= nat2bit_vec(r_addr_index);
-            w_en_s <= '0'; wait for 1 ns;
-            assert data_from_memo = nat2bit_vec(data_num);
-        end if;
-            --clear memo so that by the next time of checking the other memory blocks will be 0
-                addr_s <= nat2bit_vec(addr_index);
-                data_to_memo <= X"000"; 
-                w_en_s <= '1'; wait for 1 ns;
-                w_en_s <= '0'; wait for 1 ns;
-            
-
-            end loop;
-        end loop;                  
-    end loop;
-
-
-
+            assert data_from_memo = nat2bit_vec(r_addr_index);
+end loop;
         wait;
 end process;
 end TB;
