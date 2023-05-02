@@ -51,7 +51,7 @@ port map (
     data_out_C => data_from_memo);
 
 process
-    use WORK.bit_vec_nat_pack.all;    
+    use work.bit_vec_nat_pack.all;    
 begin
 --reset memo
 for addr_index in 0 to 4095 loop
@@ -60,21 +60,24 @@ for addr_index in 0 to 4095 loop
     w_en_s <= '1'; wait for 1 ns;
     w_en_s <= '0'; wait for 1 ns;
 end loop;
+
+
 --write memo
 for data_num in 0 to 4095 loop    
             addr_s <= nat2bit_vec(data_num);
             data_to_memo <= nat2bit_vec(data_num);
             w_en_s <= '1'; wait for 1 ns;
-            w_en_s <= '0'; wait for 1 ns;      
-end loop;             
+            w_en_s <= '0'; wait for 1 ns;    
+end loop;   
+  
 --test: read memo
+
 for r_addr_index in 0 to 4095 loop 
             addr_s <= nat2bit_vec(r_addr_index);     
             w_en_s <= '0'; wait for 1 ns;
-            assert data_from_memo = nat2bit_vec(r_addr_index);
+            assert data_from_memo = nat2bit_vec(r_addr_index) report "error message" severity warning;
 end loop;
         wait;
 end process;
 end TB;
-
 

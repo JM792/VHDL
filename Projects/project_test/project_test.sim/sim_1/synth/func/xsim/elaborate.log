@@ -1,0 +1,5 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 0fb19cecad794f9d9cdf6f62b77a55d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot memory_1_TEST_func_synth xil_defaultlib.memory_1_TEST -log elaborate.log 
+Using 2 slave threads.
+ERROR: [XSIM 43-3225] Cannot find design unit xil_defaultlib.memory_1_TEST in library work located at xsim.dir/work.

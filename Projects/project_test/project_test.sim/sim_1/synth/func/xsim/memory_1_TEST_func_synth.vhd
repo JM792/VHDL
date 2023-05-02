@@ -1,0 +1,12 @@
+-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-- --------------------------------------------------------------------------------
+-- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+-- Date        : Mon May  1 22:19:25 2023
+-- Host        : LAPTOP-NQU0J677 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -mode funcsim -nolib -force -file
+--               E:/TUM/VHDL/Projects/project_test/project_test.sim/sim_1/synth/func/xsim/memory_1_TEST_func_synth.vhd
+-- Design      : memory_1_TEST
+-- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
+--               synthesized. This netlist cannot be used for SDF annotated simulation.
+-- Device      : xc7k70tfbv676-1
+-- --------------------------------------------------------------------------------

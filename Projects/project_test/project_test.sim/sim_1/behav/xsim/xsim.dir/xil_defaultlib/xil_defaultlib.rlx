@@ -1,0 +1,7 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+E:/TUM/VHDL/Resources/MEM_TB_Config.vhd,1683002921,vhdl,,,,mem1_tb_config,,,,,,,,
+E:/TUM/VHDL/Resources/TB_1.vhd,1682976245,vhdl,E:/TUM/VHDL/Resources/MEM_TB_Config.vhd,,,bit_vec_nat_pack;memory_1_test,,,,,,,,
+E:/TUM/VHDL/Resources/memory_1.vhd,1682975887,vhdl,E:/TUM/VHDL/Resources/MEM_TB_Config.vhd,,,memory_1,,,,,,,,

@@ -1,0 +1,2 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/TUM/VHDL/Resources/MEM_TB_Config.vhd" into library xil_defaultlib
+WARNING: [VRFC 10-3607] overwriting existing primary unit 'mem1_tb_config' [E:/TUM/VHDL/Resources/MEM_TB_Config.vhd:12]
