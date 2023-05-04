@@ -1,0 +1,319 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu May  4 11:53:10 2023
+# Process ID: 13532
+# Current directory: E:/TUM/VHDL/Projects/MEMO_extercise/MEMO_extercise.runs/synth_1
+# Command line: vivado.exe -log memory_1_TEST.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source memory_1_TEST.tcl
+# Log file: E:/TUM/VHDL/Projects/MEMO_extercise/MEMO_extercise.runs/synth_1/memory_1_TEST.vds
+# Journal file: E:/TUM/VHDL/Projects/MEMO_extercise/MEMO_extercise.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source memory_1_TEST.tcl -notrace
+Command: synth_design -top memory_1_TEST -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11124 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 573.043 ; gain = 242.602
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'memory_1_TEST' [E:/TUM/VHDL/Resources/TB_1.vhd:31]
+INFO: [Synth 8-637] synthesizing blackbox instance 'UUT1' of component 'MEM1' [E:/TUM/VHDL/Resources/TB_1.vhd:47]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [E:/TUM/VHDL/Resources/TB_1.vhd:61]
+INFO: [Common 17-14] Message 'Synth 8-312' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'memory_1_TEST' (1#1) [E:/TUM/VHDL/Resources/TB_1.vhd:31]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 659.352 ; gain = 328.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 659.352 ; gain = 328.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 659.352 ; gain = 328.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 659.352 ; gain = 328.910
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 787.492 ; gain = 457.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 787.492 ; gain = 457.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 787.492 ; gain = 457.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4649] Removing BlackBox instance UUT1 of module MEM1_bbox_0 having unconnected or no output ports
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 787.492 ; gain = 457.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 787.492 ; gain = 457.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 787.492 ; gain = 457.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 787.492 ; gain = 457.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 787.492 ; gain = 457.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 787.492 ; gain = 457.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 787.492 ; gain = 457.051
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12288 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 787.492 ; gain = 457.051
+Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 787.492 ; gain = 457.051
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 787.492 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 891.184 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+12 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 891.184 ; gain = 585.602
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 891.184 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/TUM/VHDL/Projects/MEMO_extercise/MEMO_extercise.runs/synth_1/memory_1_TEST.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file memory_1_TEST_utilization_synth.rpt -pb memory_1_TEST_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu May  4 11:53:33 2023...

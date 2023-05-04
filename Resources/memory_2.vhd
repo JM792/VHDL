@@ -41,13 +41,15 @@ end memory_2;
 architecture Behavioral of memory_2 is
 begin
 process(addr, data_in, w_en)
-    type memo_type is array (natural range 0 to 4095) of natural range 0 to 4095;
+    type memo_type is array (integer range 4095 downto 0) of integer range 4095 downto 0;
     variable Mem: memo_type;
+    
+    
 begin
-    if w_en then
+    if w_en then --if true then assign data to the address
         Mem(addr) := data_in;
     end if;
     data_out <= Mem(addr);
-
+    
 end process;
 end Behavioral;

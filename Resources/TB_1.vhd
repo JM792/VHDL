@@ -41,6 +41,7 @@ component MEM1 is
 subtype constrained_bit_vec is bit_vector(11 downto 0);
 signal w_en_s: bit := '0';
 signal addr_s, data_to_memo, data_from_memo: constrained_bit_vec;
+signal fl: bit := '0';
 
 begin
 UUT1: MEM1
@@ -61,7 +62,7 @@ for addr_index in 0 to 4095 loop
     w_en_s <= '0'; wait for 1 ns;
 end loop;
 
-
+fl <= '1';
 --write memo
 for data_num in 0 to 4095 loop    
             addr_s <= nat2bit_vec(data_num);
@@ -69,7 +70,8 @@ for data_num in 0 to 4095 loop
             w_en_s <= '1'; wait for 1 ns;
             w_en_s <= '0'; wait for 1 ns;    
 end loop;   
-  
+  fl <= '0';
+
 --test: read memo
 
 for r_addr_index in 0 to 4095 loop 
@@ -77,6 +79,7 @@ for r_addr_index in 0 to 4095 loop
             w_en_s <= '0'; wait for 1 ns;
             assert data_from_memo = nat2bit_vec(r_addr_index) report "error message" severity warning;
 end loop;
+fl <= '1';
         wait;
 end process;
 end TB;
