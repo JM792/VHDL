@@ -26,3 +26,18 @@ end for;
 end MEM1_TB_Config;
 
 
+configuration MEM2_TB_Config of memory_2_TEST is
+for TB
+    for 
+    UUT2: RAM2
+    use entity work.memory_2(Behavioral)
+    port map(
+    w_en => w_en,
+    data_in => data_in,
+    data_out => data_out,
+    addr => addr
+    
+    );
+    end for;
+end for;
+end MEM2_TB_Config;
