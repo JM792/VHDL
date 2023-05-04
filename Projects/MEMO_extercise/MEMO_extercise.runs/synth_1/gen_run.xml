@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1683193988">
   <File Type="PA-TCL" Name="memory_1_TEST.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="memory_1_TEST_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="memory_1_TEST_reports.tcl"/>
   <File Type="RDS-RDS" Name="memory_1_TEST.vds"/>
-  <File Type="RDS-UTIL" Name="memory_1_TEST_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="memory_1_TEST_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="memory_1_TEST.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="memory_1_TEST_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="memory_1_TEST_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../Resources/memory_1.vhd">

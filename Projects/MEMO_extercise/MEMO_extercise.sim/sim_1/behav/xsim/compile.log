@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "E:/TUM/VHDL/Resources/memory_2.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'memory_2'
-INFO: [VRFC 10-163] Analyzing VHDL file "E:/TUM/VHDL/Resources/TB_2.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'memory_2_TEST'
