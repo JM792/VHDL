@@ -1,6 +1,5 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
-"../../../../../../Resources/memory_2.vhd" \
 "../../../../../../Resources/TB_2.vhd" \
 
 # Do not sort compile order

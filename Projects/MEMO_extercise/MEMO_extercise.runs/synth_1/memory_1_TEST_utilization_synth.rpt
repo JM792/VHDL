@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu May  4 11:53:33 2023
+| Date         : Thu May  4 22:27:00 2023
 | Host         : LAPTOP-NQU0J677 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file memory_1_TEST_utilization_synth.rpt -pb memory_1_TEST_utilization_synth.pb
 | Design       : memory_1_TEST

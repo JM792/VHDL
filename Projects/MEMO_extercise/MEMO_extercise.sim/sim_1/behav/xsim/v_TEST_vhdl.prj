@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../Resources/memory_1.vhd" \
+"../../../../../../Resources/memory_2.vhd" \
+"../../../../MEMO_extercise.srcs/sources_1/new/TB_v.vhd" \
+
+# Do not sort compile order
+nosort

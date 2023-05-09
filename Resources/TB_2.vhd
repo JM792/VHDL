@@ -16,7 +16,7 @@ port(
        data_out : out integer range 4095 downto 0);
 end component;
 
-signal w_en_s: boolean;
+signal w_en_s: boolean := false;
 signal addr_s, data_to_memo, data_from_memo: integer range 4095 downto 0;
 
 begin
