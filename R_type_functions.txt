@@ -1,0 +1,65 @@
+package R_type_functions is
+use WORK.cpu_defs_pack.all;
+    
+    procedure R_slice(
+        Instr: in data_type;
+        rs1: out reg_addr_type;
+        rs2: out reg_addr_type;
+        rd: out reg_addr_type;
+        func3: out func3_type;
+        func7: out func7_type
+    );
+    procedure SLT(
+    rs1: in reg_addr_type;
+    rs2: in reg_addr_type;
+    rd: in reg_addr_type
+    );
+    
+    procedure SLTU(
+    rs1: in reg_addr_type;
+    rs2: in reg_addr_type;
+    rd: in reg_addr_type
+    );
+
+end R_type_functions;
+
+package body R_type_functions is
+    procedure R_slice(
+        Instr: in data_type;
+        rs1: out reg_addr_type;
+        rs2: out reg_addr_type;
+        rd: out reg_addr_type;
+        func3: out func3_type;
+        func7: out func7_type
+    ) is
+    
+    begin
+        rs1 := Instr(19 downto 15);
+        rs2 := Instr(24 downto 20);
+        rd := Instr(11 downto 7);
+        func3 := Instr(14 downto 12);
+        func7 := Instr(31 downto 25);
+    end R_slice;
+    
+    procedure SLT(
+        rs1: in reg_addr_type;
+        rs2: in reg_addr_type;
+        rd: in reg_addr_type
+    ) is
+    begin
+    
+    
+    end SLT;
+    
+    procedure SLTU(
+        rs1: in reg_addr_type;
+        rs2: in reg_addr_type;
+        rd: in reg_addr_type
+    ) is
+    begin
+    
+    
+    end SLTU;    
+
+
+end R_type_functions;
