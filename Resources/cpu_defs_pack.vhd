@@ -26,9 +26,9 @@ type reg_type is array (reg_width**2-1 downto 0) of bit_vector(regData_width-1 d
 constant code_nop: opcode_type := nat2bit_vec(0)(opcode_width-1 downto 0) ; --nat2bit_vec returns 12 bits bit_vector
 constant code_stop: opcode_type := nat2bit_vec(1)(opcode_width-1 downto 0) ;
 constant I_Type: opcode_type := "0000011";
-constant LB: func3_type := "000";
-constant LH: func3_type := "001";
-constant LW: func3_type := "010";
-constant LBU: func3_type := "100";
-constant LHU: func3_type := "101";
+constant op_LB: func3_type := "000";
+constant op_LH: func3_type := "001";
+constant op_LW: func3_type := "010";
+constant op_LBU: func3_type := "100";
+constant op_LHU: func3_type := "101";
 end cpu_defs_pack;

@@ -15,12 +15,11 @@ begin
 
 process
 use work.cpu_defs_pack.all;
-use work.mem_instruction.all;
+use work.mem_pack.all;
 use work.register_init.all;
 use work.I_Type_functions.all;
 variable execute: boolean := true;
-variable Memory: mem_type := init_memory;
-variable Regi: reg_type := init_reg;
+variable Mem_Instr: mem_type := init_memory;
 variable OP: bit_vector;
 variable Imm: bit_vector;
 variable Instr: bit_vector;
@@ -39,15 +38,13 @@ OP := Instr(opcode_width-1 downto 0);
         when code_stop => execute := false;
         when code_nop => null;
         when I_Type => 
-            Imm := Instr(31 downto 20);
-            rs := Instr(19 downto 15);
-            rd := Instr(11 downto 7);
+            I_slice(Instr, rs, rd, Imm, func3);
             case func3 is
-                when LB => ,
-                when LH => ,
-                when LW => ,
-                when LBU => ,
-                when LHU =>
+                when op_LB => LB(rs,rd,Imm);
+                when op_LH => LH(rs,rd,Imm);
+                when op_LW => LW(rs,rd,Imm);
+                when op_LBU => LBU(rs,rd,Imm);
+                when op_LHU => LHU(rs,rd,Imm);
             end case;
     PC := PC + 1;
     end case;
