@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_bit.all;
 
---create function
+--create function (make the function general)
 package bit_vec_nat_pack is
     subtype number_range is natural range 0 to 4095;
     function nat2bit_vec (nat: number_range)

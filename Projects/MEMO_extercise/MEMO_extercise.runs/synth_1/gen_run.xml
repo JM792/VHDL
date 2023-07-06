@@ -3,8 +3,6 @@
   <File Type="PA-TCL" Name="memory_1_TEST.tcl"/>
   <File Type="REPORTS-TCL" Name="memory_1_TEST_reports.tcl"/>
   <File Type="RDS-RDS" Name="memory_1_TEST.vds"/>
-  <File Type="RDS-UTIL" Name="memory_1_TEST_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="memory_1_TEST_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="memory_1_TEST.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>

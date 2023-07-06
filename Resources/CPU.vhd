@@ -14,6 +14,7 @@ begin
 
 
 process
+use std.textio.all;
 use work.cpu_defs_pack.all;
 use work.mem_pack.all;
 use work.register_init.all;
@@ -31,14 +32,19 @@ variable rd, rs, rs1, rs2: reg_addr_type;
 
 
 begin
-while execute loop
---cmd fetch and decode
-Instr := Memory(PC);
+
+Instr := Memory(PC); --replace by function call get(Memory, PC) with fileio
 OP := Instr(opcode_width-1 downto 0);
 
+while execute loop
+--cmd fetch and decode
+
+
+--TODO: AND and NOT operator redefine
+--set flag function
     case OP is
         when code_stop => execute := false;
-        when code_nop => null;
+        when code_nop => null; --nothing has to be done
         when I_Type => 
             I_slice(Instr, rs, rd, Imm, func3);
             case func3 is
@@ -57,7 +63,9 @@ OP := Instr(opcode_width-1 downto 0);
                         when op_SLTU => SLTU(rs1, rs2, rd);
                     end case;
             end case;
-    PC := PC + 1;
+    --in case of overflow (at the last address)
+    when others => assert  False report "Illegal Operation" severity Error;
+    PC := (PC + 1) mod 2 ** addr_width; --replace by function call INC(PC)
     end case;
 end loop;
 
