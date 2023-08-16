@@ -55,21 +55,48 @@ while execute loop
                 when op_LW => LW(Memory,rs,rd,Imm);
                 when op_LBU => LBU(Memory,rs,rd,Imm);
                 when op_LHU => LHU(Memory,rs,rd,Imm);
-            end case;
+            end case;            
+        when I_Type_COMP =>
+            I_slice(Instr, rs, rd, Imm, func3);
+            case func3 is
+                when op_XORI => 
+                when op_ORI =>
+                when op_ANDI => 
         when R_Type =>
             R_slice(Instr, rs1, rs2, rd, func3, func7);
             case func7 is
-                when op_COMP => --do compare and arithmetic operations
+                when op_allZero => --do compare and arithmetic operations
                     case func3 is
                         when op_SLT => SLT(rs1, rs2, rd);
                         when op_SLTU => SLTU(rs1, rs2, rd);
+                        when op_SLL => 
+                        when op_SRL =>                  
+                        when op_OR => 
+                        when op_AND =>
+                        when op_XOR =>
+                    end case;
+                when op_7SRA | op_7SRAI =>
+                    case func3 is
+                        when op_SRA =>
+                        when op_SRAI =>
+                     
                     end case;
             end case;
         when S_Type => 
             S_slice();
         when J_Type =>
             J_slice();
+        when B_Type =>
+            B_slice();
+            case func3 is
+                when op_BEQ =>
+                when op_BNE =>
+                when op_BLT =>
+                when op_BGE =>
+                when op_BLTU =>
+                when op_BGEU =>
             
+            end case;
     --in case of overflow (at the last address)
     when others => assert  False report "Illegal Operation" severity Error;
     PC := (PC + 1) mod 2 ** AddrSize; --replace by function call INC(PC)
