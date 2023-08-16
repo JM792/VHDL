@@ -69,8 +69,8 @@ while execute loop
                     case func3 is
                         when op_SLT => SLT(rs1, rs2, rd);
                         when op_SLTU => SLTU(rs1, rs2, rd);
-                        when op_SLL => 
-                        when op_SRL =>                  
+                        when op_SLL => SLL_Instr(rs1, rs2, rd); 
+                        when op_SRL => SRL_Instr(rs1, rs2, rd);
                         when op_OR => 
                         when op_AND =>
                         when op_XOR =>

@@ -9,7 +9,7 @@ package cpu_defs_pack is
     --constant data_width: natural := 32;
     constant AddrSize: natural := 16;
     constant InstrSize: natural := 32;
-    constant RegisterDataSize: natural := 32;
+    constant RegDataSize: natural := 32;
     constant RegisterAddrSize: natural := 5;
     constant opcode_width: natural := 7;
     constant func3_width: natural:= 3;
@@ -17,6 +17,7 @@ package cpu_defs_pack is
     
     subtype BusDataType is bit_vector(BusDataSize -1 downto 0);
     --subtype data_type is  bit_vector(data_width -1 downto 0);
+    --subtype RegDataType is bit_vector(RegDataSize - 1 downto 0);
     subtype InstrType is bit_vector(InstrSize - 1 downto 0);
     subtype AddrType is bit_vector(AddrSize downto 0);
     subtype RegAddrType is bit_vector(RegisterAddrSize-1 downto 0);
@@ -24,7 +25,7 @@ package cpu_defs_pack is
     subtype func3_type is bit_vector(func3_width-1 downto 0);
     subtype func7_type is bit_vector(func7_width-1 downto 0);
     type MemType is array (4095 downto 0) of bit_vector(BusDataSize - 1 downto 0);
-    type RegType is array (2 ** RegisterAddrSize - 1 downto 0) of bit_vector(RegisterDataSize-1 downto 0) ;
+    type RegType is array (2 ** RegisterAddrSize - 1 downto 0) of bit_vector(RegDataSize-1 downto 0) ;
     
     type cmd_MemType is array (2 ** opcode_width - 1 downto 0) of string (1 to 4);
     
