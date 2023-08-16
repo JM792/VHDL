@@ -20,15 +20,17 @@ use work.mem_pack.all;
 use work.register_init.all;
 use work.I_Type_functions.all;
 use work.R_Type_functions.all;
+
+--initialization
 variable execute: boolean := true;
-variable Mem_Instr: mem_type := init_memory;
-variable OP: bit_vector;
+variable Memory: MemType := init_memory;
+variable OP: opcode_type;
 variable Imm: bit_vector;
 variable Instr: bit_vector;
 variable func3: func3_type;
 variable func7: func7_type;
 variable PC: integer := 0;
-variable rd, rs, rs1, rs2: reg_addr_type;
+variable rd, rs, rs1, rs2: RegAddrType;
 
 
 begin
@@ -48,11 +50,11 @@ while execute loop
         when I_Type => 
             I_slice(Instr, rs, rd, Imm, func3);
             case func3 is
-                when op_LB => LB(rs,rd,Imm);
-                when op_LH => LH(rs,rd,Imm);
-                when op_LW => LW(rs,rd,Imm);
-                when op_LBU => LBU(rs,rd,Imm);
-                when op_LHU => LHU(rs,rd,Imm);
+                when op_LB => LB(Memory,rs,rd,Imm);
+                when op_LH => LH(Memory,rs,rd,Imm);
+                when op_LW => LW(Memory,rs,rd,Imm);
+                when op_LBU => LBU(Memory,rs,rd,Imm);
+                when op_LHU => LHU(Memory,rs,rd,Imm);
             end case;
         when R_Type =>
             R_slice(Instr, rs1, rs2, rd, func3, func7);
@@ -63,9 +65,14 @@ while execute loop
                         when op_SLTU => SLTU(rs1, rs2, rd);
                     end case;
             end case;
+        when S_Type => 
+            S_slice();
+        when J_Type =>
+            J_slice();
+            
     --in case of overflow (at the last address)
     when others => assert  False report "Illegal Operation" severity Error;
-    PC := (PC + 1) mod 2 ** addr_width; --replace by function call INC(PC)
+    PC := (PC + 1) mod 2 ** AddrSize; --replace by function call INC(PC)
     end case;
 end loop;
 

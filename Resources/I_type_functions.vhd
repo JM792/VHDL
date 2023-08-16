@@ -1,3 +1,9 @@
+--begin section by Jiayi Ma
+
+--extend package for imcomplete size LOAD
+--I type functions
+
+
 library IEEE;
 use IEEE.numeric_bit.all;
 
@@ -7,12 +13,12 @@ use work.cpu_defs_pack.all;
 
 procedure signed_extend(
 sig_in: in bit_vector; 
-sig_out: out data_type
+sig_out: out BusDataType
 );
 
 procedure unsigned_extend(
 sig_in: in bit_vector;
-sig_out: out data_type
+sig_out: out BusDataType
 );
 end extension_pack;
 
@@ -20,7 +26,7 @@ package body extension_pack is
 
 procedure signed_extend(
 sig_in: in bit_vector; 
-sig_out: out data_type
+sig_out: out BusDataType
 ) is
 begin
     sig_out := (others => sig_in(sig_in'HIGH)); 
@@ -31,7 +37,7 @@ end signed_extend;
 
 procedure unsigned_extend(
 sig_in: in bit_vector;
-sig_out: out data_type
+sig_out: out BusDataType
 ) is
 begin
     sig_out := (others => '0');
@@ -42,12 +48,10 @@ end unsigned_extend;
 end extension_pack;
 
 
-
-
+--for LW, LH, LB the immediate values are signed, for LHU, LBU the immediate are unsigned
 
 library IEEE;
 use IEEE.numeric_bit.all;
---for LW, LH, LB the immediate values are signed, for LHU, LBU the immediate are unsigned
 
 package I_Type_functions is
 
@@ -59,37 +63,42 @@ subtype imm_type_I is bit_vector(11 downto 0); --immediate size in i type
 
 procedure I_slice( 
 --I-type slicing/decoding
-    Instr: in bit_vector(instr_width-1 downto 0);
-    rs: out reg_addr_type;
-    rd: out reg_addr_type;
+    Instr: in bit_vector(InstrSize - 1 downto 0);
+    rs: out RegAddrType;
+    rd: out RegAddrType;
     imm: out imm_type_I; 
     func3: out func3_type
 );
 
 procedure LW(
-    rs: in reg_addr_type;
-    rd: in reg_addr_type;
+    Memory: in MemType;
+    rs: in RegAddrType;
+    rd: in RegAddrType;
     imm: in imm_type_I
 );
 
 procedure LH(
-    rs: in reg_addr_type;
-    rd: in reg_addr_type;
+    Memory: in MemType;
+    rs: in RegAddrType;
+    rd: in RegAddrType;
     imm: in imm_type_I
 );
 procedure LB(
-    rs: in reg_addr_type;
-    rd: in reg_addr_type;
+    Memory: in MemType;
+    rs: in RegAddrType;
+    rd: in RegAddrType;
     imm: in imm_type_I
 );
 procedure LBU(
-    rs: in reg_addr_type;
-    rd: in reg_addr_type;
+    Memory: in MemType;
+    rs: in RegAddrType;
+    rd: in RegAddrType;
     imm: in imm_type_I
 );
 procedure LHU(
-    rs: in reg_addr_type;
-    rd: in reg_addr_type;
+    Memory: in MemType;
+    rs: in RegAddrType;
+    rd: in RegAddrType;
     imm: in imm_type_I
 );
 end I_Type_functions;
@@ -99,9 +108,9 @@ end I_Type_functions;
 package body I_Type_functions is
 
 procedure I_slice(
-    Instr: in bit_vector(instr_width-1 downto 0);
-    rs: out reg_addr_type;
-    rd: out reg_addr_type;
+    Instr: in bit_vector(InstrSize-1 downto 0);
+    rs: out RegAddrType;
+    rd: out RegAddrType;
     imm: out imm_type_I; --immediate size in i type
     func3: out func3_type
 ) is
@@ -116,8 +125,9 @@ end I_slice;
 
 
 procedure LW(
-    rs: in reg_addr_type;
-    rd: in reg_addr_type;
+    Memory: in MemType;
+    rs: in RegAddrType;
+    rd: in RegAddrType;
     imm: in imm_type_I)is
 begin
     Reg(to_integer(UNSIGNED(rd))) := Memory(to_integer(UNSIGNED(rs)) + to_integer(SIGNED(imm)));
@@ -125,12 +135,13 @@ begin
 end LW;
 
 procedure LH(
-    rs: in reg_addr_type;
-    rd: in reg_addr_type;
+    Memory: in MemType;
+    rs: in RegAddrType;
+    rd: in RegAddrType;
     imm: in imm_type_I
 ) is
-variable half_word: bit_vector((data_width/2)-1 downto 0);
-variable extended: data_type;
+variable half_word: bit_vector((BusDataSize/2)-1 downto 0);
+variable extended: BusDataType;
 begin
     half_word := Memory(to_integer(UNSIGNED(rs)) + to_integer(UNSIGNED(imm)))(15 downto 0);
     signed_extend(half_word, extended);
@@ -138,12 +149,13 @@ begin
 end LH;
 
 procedure LB(
-    rs: in reg_addr_type;
-    rd: in reg_addr_type;
+    Memory: in MemType;
+    rs: in RegAddrType;
+    rd: in RegAddrType;
     imm: in imm_type_I
 ) is
-variable Byte: bit_vector((data_width/4)-1 downto 0);
-variable extended: data_type;
+variable Byte: bit_vector((BusDataSize/4)-1 downto 0);
+variable extended: BusDataType;
 begin
     Byte := Memory(to_integer(UNSIGNED(rs)) + to_integer(UNSIGNED(imm)))(7 downto 0);
     signed_extend(Byte, extended);
@@ -151,12 +163,13 @@ begin
 end LB;
 
 procedure LHU(
-    rs: in reg_addr_type;
-    rd: in reg_addr_type;
+    Memory: in MemType;
+    rs: in RegAddrType;
+    rd: in RegAddrType;
     imm: in imm_type_I
 ) is
-variable half_word: bit_vector((data_width/2)-1 downto 0);
-variable extended: data_type;
+variable half_word: bit_vector((BusDataSize/2)-1 downto 0);
+variable extended: BusDataType;
 begin 
     half_word := Memory(to_integer(UNSIGNED(rs)) + to_integer(UNSIGNED(imm)))(15 downto 0);
     unsigned_extend(half_word, extended);
@@ -165,12 +178,13 @@ begin
 end LHU;
 
 procedure LBU(
-    rs: in reg_addr_type;
-    rd: in reg_addr_type;
+    Memory: in MemType;
+    rs: in RegAddrType;
+    rd: in RegAddrType;
     imm: in imm_type_I
 ) is
-variable Byte: bit_vector((data_width/4)-1 downto 0);
-variable extended: data_type;
+variable Byte: bit_vector((BusDataSize/4)-1 downto 0);
+variable extended: BusDataType;
 begin
     Byte := Memory(to_integer(UNSIGNED(rs)) + to_integer(UNSIGNED(imm)))(7 downto 0);
     unsigned_extend(Byte, extended);
@@ -181,3 +195,4 @@ end LBU;
 end I_Type_functions;
 
 
+--end section by Jiayi Ma

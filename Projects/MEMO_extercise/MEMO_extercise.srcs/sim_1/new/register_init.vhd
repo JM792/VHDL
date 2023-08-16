@@ -1,6 +1,6 @@
 package register_init is
 use WORK.cpu_defs_pack.all;
-    shared variable Reg: reg_type := 
+    shared variable Reg: RegType := 
         ( -- register data
        
         0 => X"00000000", 

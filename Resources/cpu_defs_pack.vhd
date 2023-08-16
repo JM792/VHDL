@@ -5,33 +5,35 @@ use IEEE.numeric_bit.ALL;
 use work.bitvec_support_pack.ALL;
 package cpu_defs_pack is
 
-    constant bus_width: natural := 32;
-    constant data_width: natural := 32;
-    constant addr_width: natural := 12;
-    constant instr_width: natural := 32;
-    constant regData_width: natural := 32;
-    constant reg_width: natural := 5;
+    constant BusDataSize: natural := 32;
+    --constant data_width: natural := 32;
+    constant AddrSize: natural := 16;
+    constant InstrSize: natural := 32;
+    constant RegisterDataSize: natural := 32;
+    constant RegisterAddrSize: natural := 5;
     constant opcode_width: natural := 7;
     constant func3_width: natural:= 3;
     constant func7_width: natural := 7;
     
-    subtype bus_type is bit_vector(bus_width -1 downto 0);
-    subtype data_type is  bit_vector(data_width -1 downto 0);
-    subtype addr_type is bit_vector(addr_width downto 0);
-    subtype reg_addr_type is bit_vector(reg_width-1 downto 0);
+    subtype BusDataType is bit_vector(BusDataSize -1 downto 0);
+    --subtype data_type is  bit_vector(data_width -1 downto 0);
+    subtype InstrType is bit_vector(InstrSize - 1 downto 0);
+    subtype AddrType is bit_vector(AddrSize downto 0);
+    subtype RegAddrType is bit_vector(RegisterAddrSize-1 downto 0);
     subtype opcode_type is bit_vector(opcode_width-1 downto 0);
     subtype func3_type is bit_vector(func3_width-1 downto 0);
     subtype func7_type is bit_vector(func7_width-1 downto 0);
-    type mem_type is array (4095 downto 0) of bit_vector(data_width-1 downto 0);
-    type reg_type is array (2 ** reg_width - 1 downto 0) of bit_vector(regData_width-1 downto 0) ;
+    type MemType is array (4095 downto 0) of bit_vector(BusDataSize - 1 downto 0);
+    type RegType is array (2 ** RegisterAddrSize - 1 downto 0) of bit_vector(RegisterDataSize-1 downto 0) ;
     
-    type cmd_mem_type is array (2 ** opcode_width - 1 downto 0) of string (1 to 4);
+    type cmd_MemType is array (2 ** opcode_width - 1 downto 0) of string (1 to 4);
     
     --op_code
     constant code_nop: opcode_type := nat2bit_vec(0, opcode_width); --nat2bit_vec returns 12 bits bit_vector
     constant code_stop: opcode_type := nat2bit_vec(1, opcode_width);
     constant I_Type: opcode_type := "0000011";
     constant R_Type: opcode_type := "0110011";
+    constant J_type: opcode_type := "1101111";
     
     constant op_LB: func3_type := "000";
     constant op_LH: func3_type := "001";
@@ -45,7 +47,7 @@ package cpu_defs_pack is
     
 
     --command string output
-    constant cmd_mem_lookup_table: cmd_mem_type := (
+    constant cmd_mem_lookup_table: cmd_MemType := (
         0 => "NOP",
         1 => "STOP",
         others => " "

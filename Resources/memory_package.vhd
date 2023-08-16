@@ -9,28 +9,25 @@ use IEEE.numeric_bit.ALL;
 
 package mem_pack is
 use WORK.cpu_defs_pack.all;
-function init_memory return mem_type;
-shared variable Memory: mem_type := (
-0 => X"00000000",
-1 => X"00000000"
 
-);
+
+function init_memory return MemType;
 
 function get( --read memory from addr, get data
-    constant Memory: in mem_type;
-    constant addr: in addr_type
-) return data_type;
+    constant Memory: in MemType;
+    constant addr: in AddrType
+) return BusDataType;
 
 --initialize  memory using fileIO (procedure)
 procedure mem_init(
 variable f: in text;
-variable mem: out mem_type
+variable mem: out MemType
 );
 
 procedure set(
-    variable Memory: inout mem_type;
-    constant addr: in addr_type;
-    constant data: in data_type
+    variable Memory: inout MemType;
+    constant addr: in AddrType;
+    constant data: in BusDataType
 );
 
 
@@ -42,7 +39,7 @@ end mem_pack;
 
 
 package body mem_pack is
-    function init_memory return mem_type is
+    function init_memory return MemType is
 begin
     return
         ( -- instruction code
@@ -53,7 +50,7 @@ end init_memory;
 
 procedure mem_init(
 variable f: in text;
-variable mem: out mem_type
+variable mem: out MemType
 ) is
 begin
 
@@ -61,17 +58,17 @@ end mem_init;
 
 
 function get( --read memory from addr, get data
-    constant Memory: in mem_type;
-    constant addr: in addr_type
-) return data_type is
+    constant Memory: in MemType;
+    constant addr: in AddrType
+) return BusDataType is
 begin
     return Memory(to_integer(UNSIGNED(addr)));
 end get; 
 
 procedure set(
-    variable Memory: inout mem_type;
-    constant addr: in addr_type;
-    constant data: in data_type
+    variable Memory: inout MemType;
+    constant addr: in AddrType;
+    constant data: in BusDataType
 ) is 
 begin
     Memory(to_integer(UNSIGNED(addr))) := data;

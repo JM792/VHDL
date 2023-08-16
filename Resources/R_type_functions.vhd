@@ -6,34 +6,34 @@ package R_type_functions is
 use WORK.cpu_defs_pack.all;
 use WORK.register_init.all;
     procedure R_slice(
-        Instr: in data_type;
-        rs1: out reg_addr_type;
-        rs2: out reg_addr_type;
-        rd: out reg_addr_type;
+        Instr: in InstrType;
+        rs1: out RegAddrType;
+        rs2: out RegAddrType;
+        rd: out RegAddrType;
         func3: out func3_type;
         func7: out func7_type
     );
     procedure SLT(
-    rs1: in reg_addr_type;
-    rs2: in reg_addr_type;
-    rd: in reg_addr_type
+    rs1: in RegAddrType;
+    rs2: in RegAddrType;
+    rd: in RegAddrType
     );
     
     procedure SLTU( 
     --set rd to 1 if rs2 is not equal to 0, otherwise sets rd to 0
-    rs1: in reg_addr_type;
-    rs2: in reg_addr_type;
-    rd: in reg_addr_type
+    rs1: in RegAddrType;
+    rs2: in RegAddrType;
+    rd: in RegAddrType
     );
 
 end R_type_functions;
 
 package body R_type_functions is
     procedure R_slice(
-        Instr: in data_type;
-        rs1: out reg_addr_type;
-        rs2: out reg_addr_type;
-        rd: out reg_addr_type;
+        Instr: in InstrType;
+        rs1: out RegAddrType;
+        rs2: out RegAddrType;
+        rd: out RegAddrType;
         func3: out func3_type;
         func7: out func7_type
     ) is
@@ -47,9 +47,9 @@ package body R_type_functions is
     end R_slice;
     
     procedure SLT(
-        rs1: in reg_addr_type;
-        rs2: in reg_addr_type;
-        rd: in reg_addr_type
+        rs1: in RegAddrType;
+        rs2: in RegAddrType;
+        rd: in RegAddrType
     ) is
     variable addr_num: integer := to_integer(UNSIGNED(rd));
     begin
@@ -64,9 +64,9 @@ package body R_type_functions is
     end SLT;
     
     procedure SLTU(
-        rs1: in reg_addr_type;
-        rs2: in reg_addr_type;
-        rd: in reg_addr_type
+        rs1: in RegAddrType;
+        rs2: in RegAddrType;
+        rd: in RegAddrType
     ) is
      variable addr_num: integer := to_integer(UNSIGNED(rd));
     begin
