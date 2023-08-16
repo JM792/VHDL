@@ -32,16 +32,21 @@ package cpu_defs_pack is
     constant code_nop: opcode_type := nat2bit_vec(0, opcode_width); --nat2bit_vec returns 12 bits bit_vector
     constant code_stop: opcode_type := nat2bit_vec(1, opcode_width);
     constant I_Type: opcode_type := "0000011";
+    constant I_Type_COMP: opcode_type := "0010011"; --XORI, ANDI, ORI
     constant R_Type: opcode_type := "0110011";
     constant J_type: opcode_type := "1101111";
+    constant B_type: opcode_type := "1100011";
     
-    constant op_LB: func3_type := "000";
-    constant op_LH: func3_type := "001";
+    constant op_LB, op_BEQ: func3_type := "000";
+    constant op_LH, op_SLL, op_SLLI, op_BNE: func3_type := "001";
     constant op_LW: func3_type := "010";
-    constant op_LBU: func3_type := "100";
-    constant op_LHU: func3_type := "101";
+    constant op_LBU, op_XORI, op_XOR, op_BLT: func3_type := "100";
+    constant op_LHU, op_SRL, op_SRLI, op_SRA, op_SRAI, op_BGE: func3_type := "101";
+    constant op_ORI, op_OR, op_BLTU: func3_type := "110";
+    constant op_ANDI, op_AND, op_BGEU: func3_type := "111";
     
-    constant op_COMP: func7_type := "0000000";
+    constant op_allZero: func7_type := "0000000"; --XRO, AND, OR, SLL(I), SRL(I)
+    constant op_7SRA, op_7SRAI: func7_type := "010000";
     constant op_SLT: func3_type := "";
     constant op_SLTU: func3_type := "";
     
