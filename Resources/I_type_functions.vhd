@@ -1,6 +1,6 @@
 --begin section by Jiayi Ma
 
---extend package for imcomplete size LOAD
+--extend package for imcomplete size LOAD, extend outptu are bit_vector
 --I type functions
 
 
@@ -128,22 +128,25 @@ procedure LW(
     Memory: in MemType;
     rs: in RegAddrType;
     rd: in RegAddrType;
-    imm: in imm_type_I)is
+    imm: in imm_type_I) 
+is    
+    variable sRegValue: integer := to_integer(UNSIGNED(Reg(to_integer(UNSIGNED(rs)))));
 begin
-    Reg(to_integer(UNSIGNED(rd))) := Memory(to_integer(UNSIGNED(rs)) + to_integer(SIGNED(imm)));
-    --address of rd register is unsigned
+    Reg(to_integer(UNSIGNED(rd))) := Memory(sRegValue + to_integer(SIGNED(imm)));
 end LW;
 
-procedure LH(
+procedure LH( --load halfword signed value from memo to reg
     Memory: in MemType;
     rs: in RegAddrType;
     rd: in RegAddrType;
     imm: in imm_type_I
 ) is
 variable half_word: bit_vector((BusDataSize/2)-1 downto 0);
+variable sRegValue: integer := to_integer(UNSIGNED(Reg(to_integer(UNSIGNED(rs)))));
 variable extended: BusDataType;
 begin
-    half_word := Memory(to_integer(UNSIGNED(rs)) + to_integer(UNSIGNED(imm)))(15 downto 0);
+    
+    half_word := Memory(sRegValue + to_integer(SIGNED(imm)))(BusDataSize/2 - 1 downto 0);
     signed_extend(half_word, extended);
     Reg(to_integer(UNSIGNED(rd))) := extended;
 end LH;
@@ -156,8 +159,9 @@ procedure LB(
 ) is
 variable Byte: bit_vector((BusDataSize/4)-1 downto 0);
 variable extended: BusDataType;
+variable sRegValue: integer := to_integer(UNSIGNED(Reg(to_integer(UNSIGNED(rs)))));
 begin
-    Byte := Memory(to_integer(UNSIGNED(rs)) + to_integer(UNSIGNED(imm)))(7 downto 0);
+    Byte := Memory(sRegValue + to_integer(UNSIGNED(imm)))(7 downto 0);
     signed_extend(Byte, extended);
     Reg(to_integer(UNSIGNED(rd))) := extended;
 end LB;
@@ -170,8 +174,9 @@ procedure LHU(
 ) is
 variable half_word: bit_vector((BusDataSize/2)-1 downto 0);
 variable extended: BusDataType;
+variable sRegValue: integer := to_integer(UNSIGNED(Reg(to_integer(UNSIGNED(rs)))));
 begin 
-    half_word := Memory(to_integer(UNSIGNED(rs)) + to_integer(UNSIGNED(imm)))(15 downto 0);
+    half_word := Memory(sRegValue + to_integer(SIGNED(imm)))(15 downto 0);
     unsigned_extend(half_word, extended);
     Reg(to_integer(UNSIGNED(rd))) := extended;
 
@@ -185,8 +190,9 @@ procedure LBU(
 ) is
 variable Byte: bit_vector((BusDataSize/4)-1 downto 0);
 variable extended: BusDataType;
+variable sRegValue: integer := to_integer(UNSIGNED(Reg(to_integer(UNSIGNED(rs)))));
 begin
-    Byte := Memory(to_integer(UNSIGNED(rs)) + to_integer(UNSIGNED(imm)))(7 downto 0);
+    Byte := Memory(sRegValue + to_integer(SIGNED(imm)))(7 downto 0);
     unsigned_extend(Byte, extended);
     Reg(to_integer(UNSIGNED(rd))) := extended;
 
