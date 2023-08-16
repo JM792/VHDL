@@ -1,3 +1,5 @@
+--begin section by Jiayi Ma
+
 library IEEE;
 use IEEE.numeric_bit.all;
 
@@ -46,6 +48,44 @@ use WORK.register_init.all;
     rs2: in RegAddrType;
     rd: in RegAddrType
     );
+    
+    procedure XOR_Instr(
+    rs1: in RegAddrType;
+    rs2: in RegAddrType;
+    rd: in RegAddrType
+    );
+
+    procedure AND_Instr(
+    rs1: in RegAddrType;
+    rs2: in RegAddrType;
+    rd: in RegAddrType
+    );
+    
+    procedure SRA_Instr( --shift righr arithmetic, preserve the sign of the original value
+    rs1: in RegAddrType;
+    rs2: in RegAddrType;
+    rd: in RegAddrType
+    );
+    
+    procedure SRAI (
+    rs1: in RegAddrType;
+    shamt: in RegAddrType;
+    rd: in RegAddrType
+    );
+    
+    procedure SLLI (
+    rs1: in RegAddrType;
+    shamt: in RegAddrType;
+    rd: in RegAddrType
+    );
+    
+    procedure SRLI(
+    rs1: in RegAddrType;
+    shamt: in RegAddrType;
+    rd: in RegAddrType
+    );
+   
+    
     
 end R_type_functions;
 
@@ -145,6 +185,98 @@ package body R_type_functions is
     rs1: in RegAddrType;
     rs2: in RegAddrType;
     rd: in RegAddrType
-    );
+   ) is 
+    variable sReg1: BusDataType := Reg(to_integer(UNSIGNED(rs1)));
+    variable sReg2: BusDataType := Reg(to_integer(UNSIGNED(rs2)));
+    variable addr_num: integer := to_integer(UNSIGNED(rd));
+  begin 
+    Reg(addr_num) := sReg1 OR sReg2;
+  end OR_Instr;
 
+    procedure XOR_Instr(
+    rs1: in RegAddrType;
+    rs2: in RegAddrType;
+    rd: in RegAddrType
+    ) is 
+    variable sReg1: BusDataType := Reg(to_integer(UNSIGNED(rs1)));
+    variable sReg2: BusDataType := Reg(to_integer(UNSIGNED(rs2)));
+    variable addr_num: integer := to_integer(UNSIGNED(rd));
+    begin 
+        Reg(addr_num) := sReg1 XOR sReg2;
+    end XOR_Instr;
+
+    procedure AND_Instr(
+    rs1: in RegAddrType;
+    rs2: in RegAddrType;
+    rd: in RegAddrType
+    ) is
+    variable sReg1: BusDataType := Reg(to_integer(UNSIGNED(rs1)));
+    variable sReg2: BusDataType := Reg(to_integer(UNSIGNED(rs2)));
+    variable addr_num: integer := to_integer(UNSIGNED(rd));
+    begin
+        Reg(addr_num) := sReg1 AND sReg2;
+    end AND_Instr;
+    
+    
+    procedure SRA_Instr(
+    rs1: in RegAddrType;
+    rs2: in RegAddrType;
+    rd: in RegAddrType
+    ) is 
+    variable shiftPos: integer := to_integer(UNSIGNED(Reg(to_integer(UNSIGNED(rs2)))));
+    variable sRegValue: BusDataType := Reg(to_integer(UNSIGNED(rs1))); --SIGNED bit_vector
+    variable result: BusDatatype;
+    variable addr_num: integer := to_integer(UNSIGNED(rd));
+    begin
+    result(BusDataSize - 1 - shiftPos downto 0) := sRegValue(BusDataSize - 1 downto shiftPos);
+    result := (others => sRegValue(sRegValue'HIGH));
+    Reg(addr_num) := result;
+    end SRA_Instr;
+    
+    
+    procedure SRAI (
+    rs1: in RegAddrType;
+    shamt: in RegAddrType; --supposed to be unsigned
+    rd: in RegAddrType
+    ) is 
+    variable shiftPos: integer := to_integer(UNSIGNED(shamt));
+    variable sRegValue: BusDataType := Reg(to_integer(UNSIGNED(rs1)));
+    variable result: BusDatatype;
+    variable addr_num: integer := to_integer(UNSIGNED(rd));    
+    begin 
+    result(BusDataSize - 1 - shiftPos downto 0) := sRegValue(BusDataSize - 1 downto shiftPos);
+    result := (others => sRegValue(sRegValue'HIGH));
+    Reg(addr_num) := result;  
+    end SRAI;
+    
+    procedure SLLI (
+    rs1: in RegAddrType;
+    shamt: in RegAddrType;
+    rd: in RegAddrType
+    ) is
+    variable shiftPos: integer := to_integer(UNSIGNED(shamt));
+    variable operand: BusDataType := Reg(to_integer(UNSIGNED(rs1)));
+    variable result: BusDatatype;
+    variable addr_num: integer := to_integer(UNSIGNED(rd));
+    begin
+        result(BusDataSize - 1 downto shiftPos) := operand(BusDataSize - 1 - shiftPos downto 0);
+        result := (others => '0') ;
+    end SLLI;
+    
+    
+    procedure SRLI(
+    rs1: in RegAddrType;
+    shamt: in RegAddrType;
+    rd: in RegAddrType
+    )is
+    variable shiftPos: integer := to_integer(UNSIGNED(shamt));
+    variable operand: BusDataType := Reg(to_integer(UNSIGNED(rs1)));
+    variable result: BusDatatype;
+    variable addr_num: integer := to_integer(UNSIGNED(rd));
+    begin
+        result(BusDataSize - 1 - shiftPos downto 0) := operand(BusDataSize - 1 downto shiftPos);
+        result := (others => '0') ;
+    end SRLI;
 end R_type_functions;
+
+--end section by Jiayi Ma

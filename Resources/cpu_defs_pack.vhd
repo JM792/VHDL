@@ -34,7 +34,8 @@ package cpu_defs_pack is
     constant code_stop: opcode_type := nat2bit_vec(1, opcode_width);
     constant I_Type: opcode_type := "0000011";
     constant I_Type_COMP: opcode_type := "0010011"; --XORI, ANDI, ORI
-    constant R_Type: opcode_type := "0110011";
+    constant R_Type1: opcode_type := "0110011"; -- SLL, SRL, SOR, OR, AND, SRA
+    constant R_Type2: opcode_type := "0010011"; -- SLLI, SRLI, SRAI
     constant J_type: opcode_type := "1101111";
     constant B_type: opcode_type := "1100011";
     
@@ -48,8 +49,8 @@ package cpu_defs_pack is
     
     constant op_allZero: func7_type := "0000000"; --XRO, AND, OR, SLL(I), SRL(I)
     constant op_7SRA, op_7SRAI: func7_type := "010000";
-    constant op_SLT: func3_type := "";
-    constant op_SLTU: func3_type := "";
+    constant op_SLT: func3_type := "010";
+    constant op_SLTU: func3_type := "011";
     
 
     --command string output

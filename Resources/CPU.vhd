@@ -20,6 +20,8 @@ use work.mem_pack.all;
 use work.register_init.all;
 use work.I_Type_functions.all;
 use work.R_Type_functions.all;
+use work.B_Type_functions.all;
+
 
 --initialization
 variable execute: boolean := true;
@@ -31,6 +33,10 @@ variable func3: func3_type;
 variable func7: func7_type;
 variable PC: integer := 0;
 variable rd, rs, rs1, rs2: RegAddrType;
+
+--B_type
+variable imm1: bit_vector(6 downto 0);
+variable imm2: bit_vector(4 downto 0);
 
 
 begin
@@ -62,7 +68,7 @@ while execute loop
                 when op_XORI => 
                 when op_ORI =>
                 when op_ANDI => 
-        when R_Type =>
+        when R_Type1=>
             R_slice(Instr, rs1, rs2, rd, func3, func7);
             case func7 is
                 when op_allZero => --do compare and arithmetic operations
@@ -71,15 +77,26 @@ while execute loop
                         when op_SLTU => SLTU(rs1, rs2, rd);
                         when op_SLL => SLL_Instr(rs1, rs2, rd); 
                         when op_SRL => SRL_Instr(rs1, rs2, rd);
-                        when op_OR => 
-                        when op_AND =>
-                        when op_XOR =>
+                        when op_OR =>  OR_Instr(rs1, rs2, rd);
+                        when op_AND => AND_Instr(rs1, rs2, rd);
+                        when op_XOR => XOR_Instr(rs1, rs2, rd);
                     end case;
                 when op_7SRA | op_7SRAI =>
                     case func3 is
-                        when op_SRA =>
-                        when op_SRAI =>
-                     
+                        when op_SRA => SRA_Instr(rs1, rs2, rd);                 
+                    end case;
+            end case;
+        when R_Type2 =>
+            R_slice(Instr, rs1, rs2, rd, func3, func7);  
+            case func7 is 
+                when op_allZero =>
+                    case func3 is
+                        when op_SLLI => SLLI(rs1, rs2, rd); --rs2 only represent bit_vector, not register address
+                        when op_SRLI => SRLI(rs1, rs2, rd);
+                    end case;
+                when op_7SRAI =>
+                    case func3 is
+                        when op_SRAI => SRAI(rs1, rs2, rd); --rs2 only represent bit_vector not register address
                     end case;
             end case;
         when S_Type => 
@@ -87,7 +104,7 @@ while execute loop
         when J_Type =>
             J_slice();
         when B_Type =>
-            B_slice();
+            B_slice(Instr, rs1, rs2, imm1, imm2, func3);
             case func3 is
                 when op_BEQ =>
                 when op_BNE =>
@@ -95,7 +112,6 @@ while execute loop
                 when op_BGE =>
                 when op_BLTU =>
                 when op_BGEU =>
-            
             end case;
     --in case of overflow (at the last address)
     when others => assert  False report "Illegal Operation" severity Error;
