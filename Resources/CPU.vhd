@@ -117,6 +117,7 @@ while execute loop
     when others => assert  False report "Illegal Operation" severity Error;
     PC := (PC + 1) mod 2 ** AddrSize; --replace by function call INC(PC)
     end case;
+    
 end loop;
 
 wait;
