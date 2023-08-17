@@ -69,16 +69,6 @@ begin
     end case;
 end to_cmd;
 
-function bool_char (d: boolean) 
-    return character is
-begin 
-    if d then return 'T';
-    else return 'F';
-    end if;
-end bool_char;
-
-
-
 procedure write_PC_CMD (
      variable l: inout line;
      constant PC: in integer;

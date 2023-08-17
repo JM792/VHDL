@@ -115,7 +115,23 @@ rd: in RegAddrType; --store return address
 Imm: in bit_vector(19 downto 0) --20 bit signed immediate value
 );
 
+procedure XORI ( --imm SIGNED
+rs: in RegAddrType;
+rd: in RegAddrType;
+Imm: in imm_type_I
+);
 
+procedure ORI ( --imm SIGNED
+rs: in RegAddrType;
+rd: in RegAddrType;
+Imm: in imm_type_I
+);
+
+procedure ANDI ( --imm SIGNED
+rs: in RegAddrType;
+rd: in RegAddrType;
+Imm: in imm_type_I
+);
 end I_Type_functions;
 
 
@@ -123,7 +139,7 @@ end I_Type_functions;
 package body I_Type_functions is
 
 procedure I_slice(
-    Instr: in bit_vector(InstrSize-1 downto 0);
+    Instr: in InstrType;
     rs: out RegAddrType;
     rd: out RegAddrType;
     imm: out imm_type_I; --immediate size in i type
@@ -225,6 +241,46 @@ begin
     Reg(rdRegAddr) := nat2bit_vec(PC + 4, 32);
     PC := to_integer(SIGNED(Reg(rsRegAddr))) + to_integer(SIGNED(Imm)) - 1;
 end JALR;
+
+procedure XORI ( --imm SIGNED
+rs: in RegAddrType;
+rd: in RegAddrType;
+Imm: in imm_type_I
+) is 
+    variable Imm_extend: BusDataType;
+    variable rdRegAddr: integer := to_integer(UNSIGNED(rd));
+    variable rsRegAddr: integer := to_integer(UNSIGNED(rs));
+begin
+    signed_extend(Imm, Imm_extend);
+    Reg(rdRegAddr) := Reg(rsRegAddr) XOR Imm_extend;
+end XORI;
+
+procedure ORI ( --imm SIGNED
+rs: in RegAddrType;
+rd: in RegAddrType;
+Imm: in imm_type_I
+) is
+    variable Imm_extend: BusDataType;
+    variable rdRegAddr: integer := to_integer(UNSIGNED(rd));
+    variable rsRegAddr: integer := to_integer(UNSIGNED(rs));
+begin
+    signed_extend(Imm, Imm_extend);
+    Reg(rdRegAddr) := Reg(rsRegAddr) OR Imm_extend;
+end ORI;
+
+procedure ANDI ( --imm SIGNED
+rs: in RegAddrType;
+rd: in RegAddrType;
+Imm: in imm_type_I
+) is
+    variable Imm_extend: BusDataType;
+    variable rdRegAddr: integer := to_integer(UNSIGNED(rd));
+    variable rsRegAddr: integer := to_integer(UNSIGNED(rs));
+begin
+    signed_extend(Imm, Imm_extend);
+    Reg(rdRegAddr) := Reg(rsRegAddr) AND Imm_extend;
+end ANDI;
+
 
 
 end I_Type_functions;

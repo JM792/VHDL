@@ -68,9 +68,9 @@ while execute loop
         when I_Type_COMP =>
             I_slice(Instr, rs, rd, Imm, func3);
             case func3 is
-                when op_XORI => 
-                when op_ORI =>
-                when op_ANDI => 
+                when op_XORI => XORI(rs, rd, Imm);
+                when op_ORI => ORI(rs, rd, Imm);
+                when op_ANDI => ANDI(rs, rd, Imm);
             end case;
         when R_Type1=>
             R_slice(Instr, rs1, rs2, rd, func3, func7);

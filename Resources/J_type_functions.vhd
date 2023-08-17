@@ -55,10 +55,10 @@ procedure JAL(
     rd: in RegAddrType; --store return address
     Imm: in bit_vector(19 downto 0) --20 bit signed immediate value
 ) is
-    variable regAddr: integer := to_integer(UNSIGNED(rd));
+    variable reg_addr: integer := to_integer(UNSIGNED(rd));
 begin
     --store PC+4 into register rd as instruction following JAL
-    Reg(regAddr) := nat2bit_vec(PC + 4, 32);
+    Reg(reg_addr) := nat2bit_vec(PC + 4, 32);
     --Imm specifies the offsets of targeted address relative to current instruction
     PC := PC + to_integer(SIGNED(Imm)) - 1;
 end JAL;
