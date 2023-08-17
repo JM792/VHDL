@@ -106,16 +106,16 @@ while execute loop
         when B_Type =>
             B_slice(Instr, rs1, rs2, imm1, imm2, func3);
             case func3 is
-                when op_BEQ =>
-                when op_BNE =>
-                when op_BLT =>
-                when op_BGE =>
-                when op_BLTU =>
-                when op_BGEU =>
+                when op_BEQ => BEQ(rs1, rs2, imm1, imm2, PC);
+                when op_BNE => BNE(rs1, rs2, imm1, imm2, PC);
+                when op_BLT => BLT(rs1, rs2, imm1, imm2, PC);
+                when op_BGE => BGE(rs1, rs2, imm1, imm2, PC);
+                when op_BLTU => BLTU(rs1, rs2, imm1, imm2, PC);
+                when op_BGEU => BGEU(rs1, rs2, imm1, imm2, PC);
             end case;
     --in case of overflow (at the last address)
-    when others => assert  False report "Illegal Operation" severity Error;
-    PC := (PC + 1) mod 2 ** AddrSize; --replace by function call INC(PC)
+        when others => assert  False report "Illegal Operation" severity Error;
+        PC := (PC + 1) mod 2 ** AddrSize; --replace by function call INC(PC)
     end case;
     
 end loop;
