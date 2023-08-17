@@ -21,6 +21,7 @@ use work.register_init.all;
 use work.I_Type_functions.all;
 use work.R_Type_functions.all;
 use work.B_Type_functions.all;
+use work.S_Type_functions.all;
 
 
 --initialization
@@ -100,7 +101,14 @@ while execute loop
                     end case;
             end case;
         when S_Type => 
-            S_slice();
+            S_slice(Instr, imm1, imm2, rs1, rs2, func3);
+            Imm_concat(imm1, imm2, Imm);
+            case func3 is
+                when op_SB => SB(Imm, rs1, rs2, Memory);
+                when op_SH => SH(Imm, rs1, rs2, Memory);
+                when op_SW => SW(Imm, rs1, rs2, Memory);
+                          
+            end case;
         when J_Type =>
             J_slice();
         when B_Type =>
