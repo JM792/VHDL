@@ -231,9 +231,4 @@ end BGEU;
 
 
 end B_type_functions;
-
-
-
-
-
 --end section by Jiayi Ma

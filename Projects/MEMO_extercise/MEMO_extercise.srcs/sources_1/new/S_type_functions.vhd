@@ -1,11 +1,10 @@
-
+--begin section by Jiayi Ma
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_bit.all;
 use WORK.cpu_defs_pack.ALL;
 use WORK.register_init.ALL;
 use WORK.extension_pack.ALL;
---begin sectoin by Jiayi Ma
 
 
 package S_type_functions is 

@@ -1,3 +1,4 @@
+--begin section Jiayi Ma
 package register_init is
 use WORK.cpu_defs_pack.all;
     shared variable Reg: RegType := 
@@ -8,3 +9,4 @@ use WORK.cpu_defs_pack.all;
         others => X"00000000");
 
 end register_init;
+--end section Jiayi Ma

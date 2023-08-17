@@ -1,3 +1,4 @@
+--begin section by Jiayi Ma
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -26,3 +27,4 @@ function nat2bit_vec (nat: number_range; len: length) return bit_vector is
     end nat2bit_vec;
 
 end bitvec_support_pack;
+--end section by Jiayi Ma

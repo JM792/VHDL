@@ -1,7 +1,4 @@
 --begin section by Jiayi Ma
-
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -138,5 +135,4 @@ end print_head;
 
 
 end fileio_support_pack;
-
 --end section by Jiayi Ma
