@@ -68,7 +68,7 @@ subtype imm_type_I is bit_vector(11 downto 0); --immediate size in i type
 
 procedure I_slice( 
 --I-type slicing/decoding
-    Instr: in bit_vector(InstrSize - 1 downto 0);
+    Instr: in InstrType;
     rs: out RegAddrType;
     rd: out RegAddrType;
     imm: out imm_type_I; 
