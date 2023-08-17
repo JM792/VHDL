@@ -1,7 +1,7 @@
 --begin section by Jiayi Ma
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.numeric_std.all;
+use IEEE.numeric_bit.all;
 use WORK.bitvec_support_pack.ALL;
 use WORK.cpu_defs_pack.all;
 use WORK.register_init.all;
