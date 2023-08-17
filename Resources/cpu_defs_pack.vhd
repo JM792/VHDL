@@ -41,7 +41,7 @@ package cpu_defs_pack is
     constant B_type: opcode_type := "1100011";
     constant S_type: opcode_type := "0100011";
     
-    constant op_LB, op_BEQ, op_SB: func3_type := "000";
+    constant op_LB, op_BEQ, op_SB, op_JALR: func3_type := "000";
     constant op_LH, op_SLL, op_SLLI, op_BNE, op_SH: func3_type := "001";
     constant op_LW, op_SW: func3_type := "010";
     constant op_LBU, op_XORI, op_XOR, op_BLT: func3_type := "100";

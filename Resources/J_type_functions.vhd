@@ -22,9 +22,9 @@ rd: in RegAddrType; --store return address
 Imm: in bit_vector(19 downto 0) --20 bit signed immediate value
 );
 
-
-
 end J_type_functions;
+
+
 
 
 

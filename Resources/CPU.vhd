@@ -7,12 +7,13 @@ entity CPU is
 --  Port ( );
 end CPU;
 
+
+
+
+
 architecture Behavioral of CPU is
 
 begin
-
-
-
 process
 use std.textio.all;
 use work.cpu_defs_pack.all;
@@ -70,6 +71,7 @@ while execute loop
                 when op_XORI => 
                 when op_ORI =>
                 when op_ANDI => 
+            end case;
         when R_Type1=>
             R_slice(Instr, rs1, rs2, rd, func3, func7);
             case func7 is
@@ -111,13 +113,14 @@ while execute loop
                           
             end case;
         when J_Type =>         
-            if Instr(14 downto 12) = '000' then --JALR
-                I_slice(Instr, rs, rd, Imm, func3);
-                JALR(PC, rs, rd, Imm);
-            else --JAL
-                J_slice(Instr, rd, Imm); 
-                JAL(PC, rd, Imm);  
-            end if;
+            case Instr(14 downto 12) is --JALR
+                when op_JALR =>
+                    I_slice(Instr, rs, rd, Imm, func3);
+                    JALR(PC, rs, rd, Imm);
+                when others =>
+                    J_slice(Instr, rd, Imm); 
+                    JAL(PC, rd, Imm);  
+            end case;
        
         when B_Type =>
             B_slice(Instr, rs1, rs2, imm1, imm2, func3);
@@ -133,7 +136,6 @@ while execute loop
         when others => assert  False report "Illegal Operation" severity Error;
         PC := (PC + 1) mod 2 ** AddrSize; --replace by function call INC(PC)
     end case;
-    
 end loop;
 
 wait;
