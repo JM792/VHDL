@@ -7,14 +7,6 @@ package bitvec_support_pack is
     subtype length is natural range 0 to 32;
     function nat2bit_vec (nat: number_range; len: length)
         return bit_vector; 
-        
---shifting 
-
-
---rotation
-
-
-
 
 end bitvec_support_pack;
 

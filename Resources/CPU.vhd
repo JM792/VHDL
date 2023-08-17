@@ -22,6 +22,7 @@ use work.I_Type_functions.all;
 use work.R_Type_functions.all;
 use work.B_Type_functions.all;
 use work.S_Type_functions.all;
+use work.J_Type_functions.all;
 
 
 --initialization
@@ -29,13 +30,13 @@ variable execute: boolean := true;
 variable Memory: MemType := init_memory;
 variable OP: opcode_type;
 variable Imm: bit_vector;
-variable Instr: bit_vector;
+variable Instr: BusDataType;
 variable func3: func3_type;
 variable func7: func7_type;
 variable PC: integer := 0;
 variable rd, rs, rs1, rs2: RegAddrType;
 
---B_type
+--B and S_type
 variable imm1: bit_vector(6 downto 0);
 variable imm2: bit_vector(4 downto 0);
 
@@ -109,8 +110,15 @@ while execute loop
                 when op_SW => SW(Imm, rs1, rs2, Memory);
                           
             end case;
-        when J_Type =>
-            J_slice();
+        when J_Type =>         
+            if Instr(14 downto 12) = '000' then --JALR
+                I_slice(Instr, rs, rd, Imm, func3);
+                JALR(PC, rs, rd, Imm);
+            else --JAL
+                J_slice(Instr, rd, Imm); 
+                JAL(PC, rd, Imm);  
+            end if;
+       
         when B_Type =>
             B_slice(Instr, rs1, rs2, imm1, imm2, func3);
             case func3 is

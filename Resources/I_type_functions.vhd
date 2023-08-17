@@ -57,6 +57,7 @@ end extension_pack;
 
 library IEEE;
 use IEEE.numeric_bit.all;
+use work. bitvec_support_pack.ALL;
 
 package I_Type_functions is
 
@@ -106,6 +107,15 @@ procedure LHU(
     rd: in RegAddrType;
     imm: in imm_type_I
 );
+
+procedure JALR(
+PC: inout integer;
+rs: in RegAddrtype;
+rd: in RegAddrType; --store return address
+Imm: in bit_vector(19 downto 0) --20 bit signed immediate value
+);
+
+
 end I_Type_functions;
 
 
@@ -202,6 +212,20 @@ begin
     Reg(to_integer(UNSIGNED(rd))) := extended;
 
 end LBU;
+
+procedure JALR(
+PC: inout integer;
+rs: in RegAddrtype; --value stored in rs1 is signed
+rd: in RegAddrType; --store return address
+Imm: in bit_vector(19 downto 0) --20 bit signed immediate value
+) is
+    variable rdRegAddr: integer := to_integer(UNSIGNED(rd));
+    variable rsRegAddr: integer := to_integer(UNSIGNED(rs));
+begin
+    Reg(rdRegAddr) := nat2bit_vec(PC + 4, 32);
+    PC := to_integer(SIGNED(Reg(rsRegAddr))) + to_integer(SIGNED(Imm)) - 1;
+end JALR;
+
 
 end I_Type_functions;
 
